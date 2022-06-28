@@ -8,14 +8,14 @@ import { Observable } from 'rxjs';
 export class NewsapiService {
 
   constructor(private _http: HttpClient) { }
-
-  newsApiUrl = "https://newsapi.org/v2/top-headlines?country=us&apiKey=4474169307b6448a8465a5644f0d6aff";
-  businessApiUrl = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=4474169307b6448a8465a5644f0d6aff";
-  entertainmentApiUrl = "https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=4474169307b6448a8465a5644f0d6aff";
-  sportsApiUrl = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=4474169307b6448a8465a5644f0d6aff";
-  techApiUrl = "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=4474169307b6448a8465a5644f0d6aff";
-  healthApiUrl = "https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=4474169307b6448a8465a5644f0d6aff";
-  scienceApiUrl = "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=4474169307b6448a8465a5644f0d6aff";
+  //token=5c1accc5427a94e42da2cf4d6d11ca31
+  newsApiUrl = "https://gnews.io/api/v4/top-headlines?country=us&token=5c1accc5427a94e42da2cf4d6d11ca31";
+  businessApiUrl = "https://gnews.io/api/v4/top-headlines?country=us&topic=business&token=5c1accc5427a94e42da2cf4d6d11ca31";
+  entertainmentApiUrl = "https://gnews.io/api/v4/top-headlines?country=us&topic=entertainment&token=5c1accc5427a94e42da2cf4d6d11ca31";
+  sportsApiUrl = "https://gnews.io/api/v4/top-headlines?country=us&topic=sports&token=5c1accc5427a94e42da2cf4d6d11ca31";
+  techApiUrl = "https://gnews.io/api/v4/top-headlines?country=us&topic=technology&token=5c1accc5427a94e42da2cf4d6d11ca31";
+  healthApiUrl = "https://gnews.io/api/v4/top-headlines?country=us&topic=health&token=5c1accc5427a94e42da2cf4d6d11ca31";
+  scienceApiUrl = "https://gnews.io/api/v4/top-headlines?country=us&topic=science&token=5c1accc5427a94e42da2cf4d6d11ca31";
 
   topHead():Observable<any> {
     return this._http.get(this.newsApiUrl);
